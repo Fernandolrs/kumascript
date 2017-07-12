@@ -66,6 +66,12 @@ ircLink = "<a href='irc://irc.mozilla.org/" + ircChannelName + "'>#" + ircChanne
 // Generate localized strings
 
 switch(env.locale) {
+    case "de":  // German
+        headingStr = "Hilf dem '" + $0 + "'-Dokumentationsprojekt…";
+        statusStr = "Schau dir den aktuellen <a href='/en-US/docs/" + driver.docStatus + "'>Status</a> der '" + $0 +"'-Dokumentation an.";
+        topicDriverStr = "Bereichsverantwortlicher: <a href='/en-US/profiles/" + driver.mdnPseudo + "'>" + driver.name + "</a> (IRC-Nickname: " + driver.ircPseudo + ")";
+        ircStr = "Zögere nicht, uns auf " + ircLink + " oder der <em>" + mlName.toUpperCase() + "</em> Discourse-Gruppe/-Liste zu kontaktieren:";
+        break;
     case "fr":  // French
         headingStr = "Aidez le projet de documentation '" + $0 + "'…";
         statusStr = "Consultez le <a href='/fr/docs/" + driver.docStatus + "'>statut</a> de la documentation '" + $0 + "'.";
