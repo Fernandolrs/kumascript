@@ -25,7 +25,8 @@ var URL    = mdn.localString({
 
 var sep = mdn.localString({
     "en-US":": ",
-    "fr"   :"&nbsp;: "
+    "fr"   :"&nbsp;: ",
+    "pt-BR":": "
 });
 
 URL_EN += $0.replace(/\s+/g,'_');
@@ -38,7 +39,8 @@ var summary = mdn.localString({
     "fr"   : "La définition de ce terme («&nbsp;"+ str +"&nbsp;») n'a pas encore été rédigée. Nous serions heureux de vous voir l'écrire&nbsp;!",
     "ja"   : "この用語 (" + str + ") の定義はまだ書かれていません。ぜひご寄稿ください！",
     "uk"   : "Визначення терміна «" + str + "» на разі відсутнє. Додайте самі, коли ваша ласка.",
-    "ru"   : "Определение термина «" + str + "» ещё не написано; может быть, вы напишете?"
+    "ru"   : "Определение термина «" + str + "» ещё не написано; может быть, вы напишете?",
+    "pt-BR": "A definição desse termo ("+ str +") ainda não foi escrita; Por favor Considere contribuir!"
 });
 
 if (page && page.summary) {
