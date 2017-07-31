@@ -29,6 +29,31 @@ switch (el) {
 </tr><%
 
         break;
+     
+     case "pt-BR":
+     
+%><tr>
+  <td><code>acceleration</code> <%-template("readOnlyInline")%></td>
+  <td><a href="/pt-BR/docs/Web/API/DeviceAcceleration">DeviceAcceleration</a></td>
+  <td>A aceleração do dispositivo. Esse valor levou em consideração o efeito da gravidade e o removeu das figuras. Esse valor pode não existir se o hardware não souber como remover a gravidade dos dados da aceleração.</td>
+</tr>
+<tr>
+  <td><code>accelerationIncludingGravity</code></td>
+  <td><a href="/pt-BR/docs/Web/API/DeviceAcceleration">DeviceAcceleration</a> <%-template("readOnlyInline")%></td>
+  <td>A aceleração do dispositivo. Esse valor inclui o efeito da gravidade e pode ser o único valor disponível em dispositivos que não possuem um giroscópio para permitir a remoção adequada da gravidade dos dados.</td>
+</tr>
+<tr>
+  <td><code>interval</code> <%-template("readOnlyInline")%></td>
+  <td>double</td>
+  <td>O intervalo, em milissegundos, no qual o DeviceMotionEvent é disparado. O próximo evento será disparado em aproximadamente esse período de tempo.</td>
+</tr>
+<tr>
+  <td><code>rotationRate</code> <%-template("readOnlyInline")%></td>
+  <td><a href="/pt-BR/docs/Web/API/DeviceRotationRate">DeviceRotationRate</a></td>
+  <td>As taxas de rotação do dispositivo sobre os três eixos.</td>
+</tr><%
+        break;
+        
     default:
 
 %><tr>
