@@ -59,51 +59,59 @@ let s_missing = mdn.localString({
     "fr"   : "La syntaxe n'a pas été trouvée !",
     "de"   : "Syntax nicht in der Datenbank gefunden!",
     "zh-CN": "该属性的语法尚未添加",
-    "ru"   : "Синтаксис не найден в базе данных"
+    "ru"   : "Синтаксис не найден в базе данных",
+    "pt-BR": "Sintaxe não encontrada no DB!"
 });
 
 let s_where = mdn.localString({
     "en-US": "where ",
     "de"   : "wobei ",
     "fr"   : "où ",
-    "ru"   : "где "
+    "ru"   : "где ",
+    "pt-BR": "onde "
 });
 
 let s_syntax_value_definition = mdn.localString({
     "en-US": "Value_definition_syntax",
     "de"   : "Wertdefinitionssyntax",
-    "fr"   : "Syntaxe_de_d%C3%A9finition_des_valeurs"
+    "fr"   : "Syntaxe_de_d%C3%A9finition_des_valeurs",
+    "pt-BR": "Sintaxe_de_definicao_de_valor"
 });
 
 let s_and = mdn.localString({
     "en-US": "and ",
     "de"   : "und ",
     "fr"   : "et ",
-	"ja"   : "と",
-    "ru"   : "и "
+    "ja"   : "と",
+    "ru"   : "и ",
+    "pt-BR": "e"
 });
 
 let s_or = mdn.localString({
     "en-US": "or",
     "de"   : "oder",
-    "ru"   : "или"
+    "ru"   : "или",
+    "pt-BR": "ou"
 });
 
 let s_possible_values = mdn.localString({
     "en-US": "Possible values: ",
     "de"   : "Mögliche Werte: ",
-    "ru"   : "Возможные значения: "
+    "ru"   : "Возможные значения: ",
+    "pt-BR": "Possíveis valores: "
 });
 
 let s_number_followed_by = mdn.localString({
     "en-US": "a number followed by",
     "de"   : "eine Nummer gefolgt von",
+    "pt-BR": "um número seguido por"
 });
 
 let s_like = mdn.localString({
     "en-US": "like",
     "de"   : "wie",
-    "ru"   : "как"
+    "ru"   : "как",
+    "pt-BR": "like"
 });
 
 let typeInfo = {
@@ -158,110 +166,130 @@ let operators = [
         regexp: /\#/g,
         title: mdn.localString({
             "en-US": "Hash mark: the entity is repeated one or several times, each occurence separated by a comma",
-            "de": "Rautensymbol: Die Entität wird einmal oder mehrmals wiederholt, wobei jedes Vorkommen durch ein Komma getrennt wird"
+            "de": "Rautensymbol: Die Entität wird einmal oder mehrmals wiederholt, wobei jedes Vorkommen durch ein Komma getrennt wird",
+	    "pt-BR": "Marca de hash: A entidade é repetida uma ou várias vezes, cada ocorrência separada por uma vírgula"
         }),
         anchor: mdn.localString({
             "en-US": "Hash_mark_()",
-            "de"   : "Rautensymbol_()"
+            "de"   : "Rautensymbol_()",
+	    "pt-BR": "Marca_de_hash_()"
         })
     },
     {
         regexp: /\|\|/g,
         title: mdn.localString({
             "en-US": "Double bar: one or several of the entities must be present, in any order",
-            "de"   : "Doppelter Balken: Eine oder mehrere der Entitäten muss angegeben werden, in beliebiger Reihenfolge"
+            "de"   : "Doppelter Balken: Eine oder mehrere der Entitäten muss angegeben werden, in beliebiger Reihenfolge",
+	    "pt-BR": "Barra dupla: Uma ou várias entidades devem estar presentes, em qualquer ordem"
         }),
         anchor: mdn.localString({
             "en-US": "Double_bar",
-            "de"   : "Doppelter_Balken"
+            "de"   : "Doppelter_Balken",
+	    "pt-BR": "Barra_dupla"
         })
     },
     {
         regexp: /[^\|](\|)[^\|]/g,
         title: mdn.localString({
             "en-US": "Single bar: exactly one of the entities must be present",
-            "de"   : "Einfacher Balken: Genau eine der Entitäten muss angegeben werden"
+            "de"   : "Einfacher Balken: Genau eine der Entitäten muss angegeben werden",
+	    "pt-BR": "Barra simples: Exatamente uma das entidades deve estar presente"
         }),
         anchor: mdn.localString({
             "en-US": "Single_bar",
-            "de"   : "Einfacher_Balken"
+            "de"   : "Einfacher_Balken",
+	    "pt-BR": "Barra_simples"
         })
     },
     {
         regexp: /&&/g,
         title: mdn.localString({
             "en-US": "Double ampersand: all of the entities must be present, in any order",
-            "de"   : "Doppeltes Und-Zeichen: Alle Entitäten müssen angegeben werden, in beliebiger Reihenfolge"
+            "de"   : "Doppeltes Und-Zeichen: Alle Entitäten müssen angegeben werden, in beliebiger Reihenfolge",
+	    "pt-BR": "Duplo E comercial(&): Todas as entidades devem estar presentes, em qualquer ordem"
         }),
         anchor: mdn.localString({
             "en-US": "Double_ampersand",
-            "de"   : "Doppeltes_Und-Zeichen"
+            "de"   : "Doppeltes_Und-Zeichen",
+	    "pt-BR": "Duplo_E_comercial"
         })
     },
     {
         regexp: /\?/g,
         title: mdn.localString({
             "en-US": "Question mark: the entity is optional",
-            "de"   : "Fragezeichen: Die Entität ist optional"
+            "de"   : "Fragezeichen: Die Entität ist optional",
+	    "pt-BR": "Ponto de interrogação: A entidade é opcional"
         }),
         anchor: mdn.localString({
             "en-US": "Question_mark_()",
-            "de"   : "Fragezeichen_()"
+            "de"   : "Fragezeichen_()",
+	    "pt-BR": "Ponto_de_interrogacao_()"
         })
     },
     {
         regexp: /([^\/])\*(?!\/)/g,
         title: mdn.localString({
             "en-US": "Asterisk: the entity may occur zero, one or several times",
-            "de"   : "Asterisk: Die Entität kann keinmal, einmal oder mehrmals vorkommen"
+            "de"   : "Asterisk: Die Entität kann keinmal, einmal oder mehrmals vorkommen",
+	    "pt-BR": "Asterisco: A entidade pode ocorrer zero, uma ou várias vezes"
         }),
         anchor: mdn.localString({
             "en-US": "Asterisk_(*)",
-            "de"   : "Asterisk_(*)"
+            "de"   : "Asterisk_(*)",
+	    "pt-BR": "Asterisco_(*)"
         })
     },
     {
         regexp: /\+/g,
         title: mdn.localString({
             "en-US": "Plus: the entity may occur one or several times",
-            "de"   : "Plus: Die Entität kann einmal oder mehrmals vorkommen"
+            "de"   : "Plus: Die Entität kann einmal oder mehrmals vorkommen",
+	    "pt-BR": "Mais: A entidade pode ocorrer uma ou várias vezes"
         }),
         anchor: mdn.localString({
             "en-US": "Plus_()",
-            "de"   : "Plus_()"
+            "de"   : "Plus_()",
+	    "pt-BR": "Mais_()"
         })
     },
     {
         regexp: /\[|\]/g,
         title: mdn.localString({
             "en-US": "Brackets: enclose several entities, combinators, and multipliers to transform them as a single component",
-            "de"   : "Eckige Klammern: umschließen mehrere Entitäten, Kombinatoren und Multiplikatoren, um diese als eine gesamte Komponente zu behandeln"
+            "de"   : "Eckige Klammern: umschließen mehrere Entitäten, Kombinatoren und Multiplikatoren, um diese als eine gesamte Komponente zu behandeln",
+	    "pt-BR": "Colchete: Inclui várias entidades, combinadores e multiplicadores para transformá-los em um único componente"
         }),
         anchor: mdn.localString({
             "en-US": "Brackets",
-            "de"   : "Eckige_Klammern"
+            "de"   : "Eckige_Klammern",
+	    "pt-BR": "Colchetes"
         })
     },
     {
         regexp: /\{(?!\s)|(\d)\}/g,
         title: mdn.localString({
             "en-US": "Curly braces: encloses two integers defining the minimal and maximal numbers of occurrences of the entity",
-            "de"   : "Geschweifte Klammern: umschließen zwei Ganzzahlen, die die Minimal- und Maximalanzahl an Vorkommen der Entität angeben"
+            "de"   : "Geschweifte Klammern: umschließen zwei Ganzzahlen, die die Minimal- und Maximalanzahl an Vorkommen der Entität angeben",
+	    "pt-BR": "Chaves: Inclui dois números inteiros que definem o número mínimo e máximo das ocorrências da entidade"
         }),
         anchor: mdn.localString({
             "en-US": "Curly_braces_(_)",
-            "de"   : "Geschweifte_Klammern_(_)"
+            "de"   : "Geschweifte_Klammern_(_)",
+	    "pt-BR": "Chaves_(_)"
         })
     },
     {
         regexp: /!/g,
         title: mdn.localString({
             "en-US": "Exclamation point: the group must produce at least one value",
-            "de"   : "Ausrufezeichen: die Gruppe muss mindestens einen Wert erzeugen"
+            "de"   : "Ausrufezeichen: die Gruppe muss mindestens einen Wert erzeugen",
+	    "pt-BR": "Ponto de exclamação: O grupo deve produzir pelo menos um valor"
         }),
         anchor: mdn.localString({
             "en-US": "#Exclamation_point_(!)",
-            "de"   : "Ausrufezeichen_(!)"
+            "de"   : "Ausrufezeichen_(!)",
+	    "pt-BR": "Ponto_de_exclamacao_(!)"
         })
     },
 ];
